@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <header>
+        <h1>OS Algorithm Visualizer</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <select id="algorithm-select">
+                <option value="fcfs">First-Come, First-Served (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="srjf">Shortest Remaining Job First (SRJF)</option>
+                <option value="priority">Priority Scheduling</option>
+                <option value="round-robin">Round Robin</option>
+            </select>
+            <button id="generate-processes">Generate New Processes</button>
+            <button id="start-scheduling">Start Scheduling</button>
+            <div class="slider-container">
+                <label for="process-count">Process Count:</label>
+                <input type="range" id="process-count" min="3" max="10" value="5">
+            </div>
+            <div class="slider-container">
+                <label for="time-quantum">Time Quantum (for Round Robin):</label>
+                <input type="range" id="time-quantum" min="1" max="10" value="2">
+            </div>
+        </div>
+        <div id="process-list"></div>
+        <div id="gantt-chart"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 OS Algorithm Visualizer. Created by [Your Name]</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
